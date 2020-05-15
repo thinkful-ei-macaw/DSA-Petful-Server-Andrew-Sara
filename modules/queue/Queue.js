@@ -44,15 +44,15 @@ class Queue {
   }
   
 
-  showNext(queue, node) {
+  showNext() {
     // Return the next item in the queue.
-    if (queue.first === null) {
+    if (this.first === null) {
       return 'Queue is empty'; 
     }
 
-    let nextNode = node.next
+    
 
-    return nextNode.value;
+    return this.first.value;
   }
 
   all() {

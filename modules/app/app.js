@@ -17,7 +17,7 @@ app.use(cors({
   origin: CLIENT_ORIGIN
 }));
 
-app.use('/people', require('../people/people.router'))
+app.use('/api/people', require('../people/people.router'))
 app.use('/api/cat', require('../cat/cat.router'))
 app.use('/api/dog', require('../dog/dog.router'))
 
