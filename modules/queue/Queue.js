@@ -26,7 +26,7 @@ class Queue {
         this.last = node;
   }
 
-  dequeue() {
+  dequeue(data) {
          //if the queue is empty, there is nothing to return
     if (this.first === null) {
           return;
@@ -44,14 +44,34 @@ class Queue {
   }
   
 
-  show() {
+  showNext(queue, node) {
     // Return the next item in the queue.
+    if (queue.first === null) {
+      return 'Queue is empty'; 
+    }
+
+    let nextNode = node.next
+
+    return nextNode.value;
   }
 
   all() {
     // Return all items in the queue.
+    if (this.first === null) {
+      return 'Queue is empty'; 
+    }
+
+    let node = this.first;
+    let arr = []
+
+    while (node.next !== null) { 
+      arr.push(node.value);
+      node = node.next; 
+    }
+    
+    arr.push(node.value);
+    return arr; 
   }
-  
 }
 
 module.exports = Queue

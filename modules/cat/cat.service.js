@@ -4,20 +4,20 @@ const store = require('../../store')
 // Set up initial data.
 // --------------------
 
-const pets = {
-  cats: new Queue(),
-}
-
-store.cats.forEach(cat => pets.cats.enqueue(cat))
+const cats = new Queue()
+store.cats.forEach(cat => cats.enqueue(cat))
 
 // --------------------
 
 module.exports = {
   get() {
-    // Return the pets next in line to be adopted.
+    // Return the pets to be adopted.
+    return cats.all()
   },
 
-  dequeue(type) {
+  dequeue(cat) {
     // Remove a pet from the queue.
+    cats.enqueue(cat)
+    return 
   }
 }
