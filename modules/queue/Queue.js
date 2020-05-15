@@ -26,7 +26,7 @@ class Queue {
         this.last = node;
   }
 
-  dequeue(data) {
+  dequeue() {
          //if the queue is empty, there is nothing to return
     if (this.first === null) {
           return;
@@ -49,9 +49,6 @@ class Queue {
     if (this.first === null) {
       return 'Queue is empty'; 
     }
-
-    
-
     return this.first.value;
   }
 
@@ -68,25 +65,9 @@ class Queue {
       arr.push(node.value);
       node = node.next; 
     }
-    
     arr.push(node.value);
     return arr; 
   }
 }
 
 module.exports = Queue
-
-  //possible all functions
-  // function display(queue) { console.log(JSON.stringify(queue)); }
-
-/* function display(queue) {
-
-if (queue.first === null) { return console.log('Queue is empty'); }
-
-let node = queue.first;
-
-let previousNode = null
-
-while (node.next !== null) { previousNode = node.value; node = node.next; console.log(previousNode); }
-
-return console.log(node.value); } */
