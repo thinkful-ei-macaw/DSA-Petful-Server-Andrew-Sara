@@ -220,7 +220,7 @@ module.exports = {
     {
       age: 3,
       breed: 'Tabby',
-      description: 'boxer dog',
+      description: 'dog boxer',
       gender: 'Male',
       imageURL: 'https://images.pexels.com/photos/1472999/pexels-photo-1472999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       name: 'Vince the Pince',
