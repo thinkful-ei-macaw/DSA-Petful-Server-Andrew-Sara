@@ -21,7 +21,7 @@ router.delete('/', json, (req, res) => {
   //remove person from the queue every 5 seconds?
   const { person } = req.body
   People.dequeue(person)
-  return res.status(204).end()
+  return res.json(People.get())
 })
 
 module.exports = router

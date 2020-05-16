@@ -24,6 +24,6 @@ module.exports = {
   dequeue(person) {
     // Remove a person from the queue.
     people.dequeue(person)
-    return 
+    return
   }
 }

@@ -6,14 +6,14 @@ const router = express.Router()
 
 router.get('/', (req, res) => {
   // Return all pets currently up for adoption.
-  const cats = Cat.get()
-  return res.json(cats)
+  const cat = Cat.get()
+  return res.json(cat)
 })
 
-router.delete('/', json, (req, res) => {
+router.delete('/', (req, res) => {
   // Remove a pet from adoption.
-  Cat.dequeue()
-  return res.status(204).end()
+  const cat = Cat.dequeue()
+  return res.json(cat)
 })
 
 module.exports = router

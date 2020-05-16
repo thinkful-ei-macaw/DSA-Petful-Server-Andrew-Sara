@@ -10,10 +10,10 @@ router.get('/', (req, res) => {
   return res.json(dog)
 })
 
-router.delete('/', json, (req, res) => {
+router.delete('/', (req, res) => {
   // Remove a pet from adoption.
-  Dog.dequeue()
-  return res.status(204).end()
+  const dog = Dog.dequeue()
+  return res.json(dog)
 })
 
 module.exports = router

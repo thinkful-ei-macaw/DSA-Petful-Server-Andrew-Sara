@@ -4,10 +4,6 @@ module.exports = {
     'Susan Sarandon',
     'Trevor Cory',
     'Jackie Brown',
-    'Karen Whosyerboss',
-    'Jim Lahey',
-    'Linda Pierogie',
-    'Madeline McCain'
   ],
 
   dogs: [

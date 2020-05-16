@@ -15,9 +15,9 @@ module.exports = {
     return cats.showNext()
   },
 
-  dequeue(cats) {
+  dequeue() {
     // Remove a pet from the queue.
     cats.dequeue()
-    return 
+    return cats.showNext()
   }
 }
