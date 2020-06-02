@@ -47,7 +47,7 @@ class Queue {
   showNext() {
     // Return the next item in the queue.
     if (this.first === null) {
-      return 'Queue is empty'; 
+      return null; 
     }
     return this.first.value;
   }
@@ -55,7 +55,7 @@ class Queue {
   all() {
     // Return all items in the queue.
     if (this.first === null) {
-      return 'Queue is empty'; 
+      return []; 
     }
 
     let node = this.first;
